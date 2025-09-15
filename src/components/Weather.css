@@ -1,0 +1,133 @@
+.weather {
+  place-self: center;
+  padding: 40px;
+  border-radius: 10px;
+  background-image: linear-gradient(45deg, #2f4680, #500ae4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative; 
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  max-width: 350px;
+  position: relative; 
+}
+
+.search-bar input {
+  flex: 1;
+  height: 50px;
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  padding-left: 25px;
+  color: #626262;
+  background: #ebfffc;
+  font-size: 18px;
+}
+
+.search-bar img {
+  width: 50px;
+  padding: 15px;
+  border-radius: 50px;
+  background: #ebfffc;
+  cursor: pointer;
+}
+
+
+.suggestions {
+  position: absolute;
+  top: 16%;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  list-style: none;
+  padding: 6px 0;
+  margin: 6px 0 0;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 1000;
+}
+
+.suggestions li {
+  padding: 10px 14px;
+  cursor: pointer;
+  font-size: 15px;
+  color: #333;
+  transition: background 0.2s;
+}
+
+.suggestions li:hover {
+  background: #f0f0f0;
+}
+
+
+.suggestions::-webkit-scrollbar {
+  width: 6px;
+}
+
+.suggestions::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 3px;
+}
+
+.weather-icon {
+  width: 150px;
+  margin: 30px 0;
+}
+
+.temperature {
+  color: #fff;
+  font-size: 80px;
+  line-height: 1;
+}
+
+.location {
+  color: #fff;
+  font-size: 40px;
+}
+
+.weather-data {
+  margin-top: 40px;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.weather-data .col {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  font-size: 18px;
+}
+
+.weather-data .col span {
+  display: block;
+  font-size: 16px;
+}
+
+.weather-data .col img {
+  width: 26px;
+  margin-top: 10px;
+}
+
+
+@media (max-width: 500px) {
+  .search-bar {
+    max-width: 90%;
+  }
+  .search-bar input {
+    font-size: 16px;
+    padding-left: 18px;
+  }
+  .suggestions li {
+    font-size: 14px;
+  }
+}
